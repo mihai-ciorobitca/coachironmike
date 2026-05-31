@@ -101,12 +101,12 @@ export function MasterclassContentsSection() {
         </p>
       </div>
 
-      <div className="mt-12">
+      <div className="mt-12 flex flex-col items-center text-center">
         <h3 className="text-lg font-bold text-[#111011] sm:text-xl">
           Masterclass Inhalte
         </h3>
 
-        <div className="mt-4 inline-flex w-full rounded-full bg-[#ececec] p-1 sm:w-auto">
+        <div className="mt-4 inline-flex w-full max-w-md rounded-full bg-[#ececec] p-1 sm:w-auto">
           {tabOrder.map((tabId) => (
             <button
               key={tabId}
@@ -123,7 +123,7 @@ export function MasterclassContentsSection() {
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 w-full text-left">
           <h4 className="text-[clamp(1.5rem,3vw,2rem)] font-bold leading-snug text-[#111011]">
             {content.headingBefore}
             <span className="font-serif font-medium italic">{content.headingItalic}</span>
