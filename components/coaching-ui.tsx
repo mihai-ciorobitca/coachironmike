@@ -17,7 +17,7 @@ export function CoachingSectionHeader({
   showBadge?: boolean;
 }) {
   return (
-    <div className="px-6 lg:px-8">
+    <div>
       {showBadge && (
         <div className="mb-8 text-center">
           <span className="inline-block rounded-lg bg-disabled px-6 py-3 text-sm font-semibold text-[#374151]">

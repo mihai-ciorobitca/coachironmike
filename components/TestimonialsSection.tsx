@@ -61,21 +61,9 @@ function BlackStarIcon() {
   );
 }
 
-function TestimonialCard({
-  title,
-  body,
-  tilt = "left",
-}: {
-  title: string;
-  body: string;
-  tilt?: "left" | "right";
-}) {
+function TestimonialCard({ title, body }: { title: string; body: string }) {
   return (
-    <article
-      className={`flex w-[min(100vw-3rem,380px)] shrink-0 flex-col rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] sm:w-[400px] sm:p-8 ${
-        tilt === "left" ? "-rotate-2" : "rotate-2"
-      }`}
-    >
+    <article className="flex h-auto w-[min(100vw-3rem,400px)] shrink-0 -rotate-2 flex-col rounded-2xl bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)] sm:p-8">
       <div className="flex items-center gap-1">
         {Array.from({ length: 5 }).map((_, index) => (
           <BlackStarIcon key={index} />
@@ -86,7 +74,7 @@ function TestimonialCard({
         {title}
       </h3>
 
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-[#111011] sm:text-[0.95rem]">
+      <p className="mt-4 text-sm leading-relaxed text-[#111011] sm:text-[0.95rem]">
         {body}
       </p>
 
@@ -103,16 +91,23 @@ export function TestimonialsSection() {
   return (
     <section className="overflow-hidden bg-[#f5f5f5] py-16 sm:py-20">
       <div className="relative">
-        <div className="testimonial-marquee flex w-max gap-6 px-6 sm:gap-8 sm:px-8">
+        <div className="testimonial-marquee flex w-max items-start gap-6 px-6 sm:gap-8 sm:px-8">
           {loopItems.map((testimonial, index) => (
             <TestimonialCard
               key={`${testimonial.title}-${index}`}
               title={testimonial.title}
               body={testimonial.body}
-              tilt={index % 2 === 0 ? "left" : "right"}
             />
           ))}
         </div>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent sm:w-20 lg:w-28"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent sm:w-20 lg:w-28"
+        />
       </div>
 
       <div className="mx-auto mt-16 flex max-w-[900px] flex-wrap items-start justify-center gap-10 px-6 sm:gap-16 lg:gap-20">

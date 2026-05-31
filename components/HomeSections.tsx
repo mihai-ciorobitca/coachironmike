@@ -73,14 +73,6 @@ function PrimaryButton({
   );
 }
 
-function DisabledBadge({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-block rounded-lg bg-disabled px-6 py-3 text-sm font-semibold text-[#374151]">
-      {children}
-    </span>
-  );
-}
-
 function SectionHeading({
   eyebrow,
   title,
@@ -180,10 +172,10 @@ const performanceCoachings = [
 
 const team = [
   {
-    name: "Mike",
-    role: "Gründer, Biohacker, Coach",
+    name: "Sasha",
+    role: "Gründerin, Biohackerin, Coach",
     description:
-      "Mike begleitet seine Coaching Mitglieder in Gesundheits- sowie Performance Coachings",
+      "Sasha begleitet ihre Coaching Mitglieder in Gesundheits- sowie Performance Coachings",
     image: "/images/mike.jpg",
   },
   {
@@ -203,34 +195,8 @@ const team = [
 export function HomeSections() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1200px] px-6 py-16 lg:px-8">
-        <div className="text-center">
-          <DisabledBadge>Coaching nicht verfügbar</DisabledBadge>
-          <h2 className="mt-10 text-[clamp(1.75rem,4vw,3.125rem)] font-medium leading-snug tracking-tight text-[#111011]">
-            Aktuell sind alle Coaching-Plätze belegt!
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-base font-medium leading-relaxed text-[#4b5563] sm:text-lg">
-            Aufgrund der hohen Nachfrage kann Mike aktuell keine neuen Coaching
-            Mitglieder aufnehmen.
-          </p>
-        </div>
-
-        <div className="mt-12 rounded-lg bg-[#ececec] px-8 py-8 sm:px-10 sm:py-10">
-          <h3 className="max-w-3xl text-[clamp(1.5rem,3vw,2.25rem)] font-medium leading-snug text-[#111011]">
-            Deshalb steckt mein 10+ Jahre Wissen jetzt in dieser Masterclass
-          </h3>
-          <p className="mt-4 max-w-2xl text-base font-medium leading-relaxed text-[#4b5563] sm:text-lg">
-            Kombination von jahrelanger Coachingerfahrung und ärztlichem
-            Fachwissen
-          </p>
-          <div className="mt-8">
-            <PrimaryButton href="#masterclass" fullWidth showArrow>
-              zur Masterclass
-            </PrimaryButton>
-          </div>
-        </div>
-
-        <div className="mt-20 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
+      <section id="masterclass" className="bg-background mx-auto w-full max-w-[1200px] px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-xl font-bold leading-none text-[#111011] sm:text-[1.75rem]">
@@ -242,49 +208,53 @@ export function HomeSections() {
             </div>
           ))}
         </div>
-      </section>
 
-      <section id="masterclass" className="mx-auto w-full max-w-[1900px] px-5 py-8 lg:px-8">
-        <div className="relative overflow-hidden rounded-[20px]">
-          <div className="relative aspect-[16/9] min-h-[480px] w-full">
+        <div className="relative mt-10 overflow-hidden rounded-[20px] sm:mt-12">
+          <div className="relative aspect-[4/5] min-h-[520px] w-full sm:aspect-[16/9] sm:min-h-[480px] lg:min-h-[560px]">
             <Image
               src="/images/masterclass.jpg"
               alt="Biohacking Masterclass"
               fill
-              className="object-cover object-right"
-              sizes="(max-width: 1900px) 100vw, 1900px"
+              className="object-cover object-[70%_center] sm:object-right"
+              sizes="(max-width: 1200px) 100vw, 1200px"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(43,38,35,0.92)_0%,rgba(43,38,35,0.55)_45%,rgba(43,38,35,0.15)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(43,38,35,0.9)_0%,rgba(43,38,35,0.65)_45%,rgba(43,38,35,0.35)_100%)] sm:bg-[linear-gradient(90deg,rgba(43,38,35,0.92)_0%,rgba(43,38,35,0.55)_45%,rgba(43,38,35,0.15)_100%)]" />
 
-            <div className="absolute inset-0 flex items-center">
-              <div className="flex w-full max-w-[640px] flex-col items-start px-8 py-10 sm:px-12 sm:py-12 lg:px-16 lg:py-16">
-                <span className="rounded-full bg-accent px-4 py-1.5 text-sm font-semibold lowercase text-white">
-                  jetzt erhältlich
-                </span>
-
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="h-px w-10 bg-white/70" aria-hidden />
-                  <span className="text-sm font-medium text-white/80">
-                    by Iron Mike
+            <div className="absolute inset-0 flex flex-col px-8 pb-10 pt-8 sm:px-12 lg:px-16 lg:pb-12 lg:pt-12">
+              <div className="grid min-h-0 flex-1 grid-rows-[auto_1fr] lg:max-w-[58%]">
+                <div className="flex flex-col items-start">
+                  <span className="rounded-full bg-accent px-4 py-1.5 text-sm font-semibold lowercase text-white">
+                    jetzt erhältlich
                   </span>
+
+                  <div className="mt-4 flex items-center gap-3">
+                    <span className="h-px w-10 bg-white/70" aria-hidden />
+                    <span className="text-sm font-medium text-white/80">
+                      by Sasha Clean Fitness
+                    </span>
+                  </div>
                 </div>
 
-                <h2 className="mt-6 max-w-xl">
-                  <span className="block font-sans text-[clamp(2rem,4vw,3.25rem)] font-bold leading-[1.1] tracking-tight text-white">
-                    Die allumfassende
-                  </span>
-                  <span className="mt-1 block font-serif text-[clamp(2.25rem,4.5vw,3.75rem)] font-medium italic leading-[1.05] text-white">
-                    Biohacking Masterclass.
-                  </span>
-                </h2>
+                <div className="flex flex-col justify-center py-4 lg:py-6">
+                  <h2 className="max-w-xl">
+                    <span className="block font-sans text-[clamp(1.75rem,6vw,3.25rem)] font-bold leading-[1.1] tracking-tight text-white lg:text-[clamp(2rem,3.2vw,3.25rem)]">
+                      Die allumfassende
+                    </span>
+                    <span className="mt-1 block font-serif text-[clamp(2rem,6.5vw,3.75rem)] font-medium italic leading-[1.05] text-white lg:text-[clamp(2.25rem,3.5vw,3.75rem)]">
+                      Biohacking Masterclass.
+                    </span>
+                  </h2>
 
-                <p className="mt-5 max-w-md text-base font-medium leading-relaxed text-white/90 sm:text-[1.05rem]">
-                  Die wirksamsten Biohacking-Strategien — endlich für jeden
-                  zugänglich.
-                </p>
+                  <p className="mt-5 max-w-md text-base font-medium leading-relaxed text-white/90 sm:text-[1.05rem] lg:mt-6 lg:max-w-lg lg:text-[clamp(1.05rem,1.6vw,1.35rem)] lg:leading-snug">
+                    Die wirksamsten Biohacking-Strategien — endlich für jeden
+                    zugänglich.
+                  </p>
+                </div>
+              </div>
 
-                <div className="mt-6 flex items-stretch gap-4">
-                  <span className="w-px shrink-0 bg-white/60" aria-hidden />
+              <div className="mt-6 flex w-full flex-col items-start gap-6 lg:mt-0 lg:flex-row lg:items-end lg:justify-between">
+                <div className="flex items-stretch gap-4">
+                  <span className="w-px shrink-0 self-stretch bg-white/60" aria-hidden />
                   <div>
                     <div className="flex items-center gap-1">
                       {Array.from({ length: 5 }).map((_, index) => (
@@ -301,7 +271,8 @@ export function HomeSections() {
                   href="#masterclass"
                   showArrow
                   pill
-                  className="mt-8 px-8"
+                  fullWidth
+                  className="px-8 lg:w-auto lg:shrink-0"
                 >
                   zur Masterclass
                 </PrimaryButton>
@@ -347,12 +318,6 @@ export function HomeSections() {
             Mehr erfahren
             <span aria-hidden>→</span>
           </Link>
-
-          <div className="mt-10 rounded-lg bg-disabled py-4 text-center">
-            <span className="text-sm font-semibold text-[#111011]">
-              aktuell nicht verfügbar
-            </span>
-          </div>
         </div>
       </section>
 
@@ -360,13 +325,17 @@ export function HomeSections() {
         title="Gesundheits Coachings."
         subtitle="Wir begleiten dich zu deinen gesundheitlichen Zielen"
         items={healthCoachings}
+        showBadge={false}
       />
 
       <CoachingGridSection
         title="Performance Coachings."
         subtitle="Wir helfen dir auf deinem Weg zum Traumkörper"
         items={performanceCoachings}
+        showBadge={false}
       />
+
+      <BiohackingMasterclassSection />
 
       <section className="mx-auto w-full max-w-[1200px] px-6 py-16 sm:py-20 lg:px-8">
         <p className="text-sm font-normal text-[#888888]">
@@ -398,15 +367,13 @@ export function HomeSections() {
         </div>
       </section>
 
-      <BiohackingMasterclassSection />
-
       <MasterclassContentsSection />
 
       <section id="about" className="mx-auto w-full max-w-[1200px] px-6 py-12 lg:px-8">
         <div className="relative min-h-[420px] overflow-hidden rounded-[20px] sm:min-h-[480px] lg:min-h-[560px]">
           <Image
             src="/images/mike.jpg"
-            alt="Über Mike"
+            alt="Über Sasha"
             fill
             className="object-cover object-center"
             sizes="(max-width: 1200px) 100vw, 1200px"
@@ -414,7 +381,7 @@ export function HomeSections() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_50%,rgba(0,0,0,0.6)_100%)]" />
           <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 lg:p-12">
             <h2 className="text-[clamp(1.75rem,4vw,3.125rem)] font-bold leading-tight text-white">
-              Über Mike.
+              Über Sasha.
             </h2>
             <p className="mt-2 text-lg font-normal text-white sm:text-xl">
               Gründer & Coach
@@ -424,9 +391,9 @@ export function HomeSections() {
 
         <div className="mt-8">
           <p className="max-w-4xl text-base leading-relaxed text-[#111011] sm:text-lg">
-            Mike ist leidenschaftlicher Personal Trainer und hat bereits hunderte von
+            Sasha ist leidenschaftliche Personal Trainerin und hat bereits hunderte von
             Personen jeden Alters, Geschlechts, Herkunft, Sportart und mit
-            unterschiedlichen Zielen in seinem Coaching betreut. Er ist der größte
+            unterschiedlichen Zielen in ihrem Coaching betreut. Sie ist die größte
             Verfechter des Mindsets &apos;Grenzen gibt es nur im Kopf&apos; und setzt sich
             tagtäglich mit den Reallife Cheatcodes des Biohackings auseinander.
           </p>
@@ -483,7 +450,7 @@ export function HomeSections() {
               Biohacking Calls.
             </h3>
             <p className="mt-2 max-w-xl text-base font-normal text-white sm:text-lg">
-              Erhalte von Mike individuelle Beratung in Video Calls
+              Erhalte von Sasha individuelle Beratung in Video Calls
             </p>
           </div>
         </div>
@@ -493,7 +460,7 @@ export function HomeSections() {
 
       <section className="mx-auto w-full max-w-[1200px] px-6 py-12 lg:px-8">
         <h2 className="text-[clamp(1.75rem,4vw,2.75rem)] font-bold text-[#111011]">
-          Die TEAMIRON Coaches
+          Die Sasha Clean Fitness Coaches
         </h2>
         <p className="mt-2 text-lg font-medium text-[#9ca3af]">Lerne uns kennen</p>
 

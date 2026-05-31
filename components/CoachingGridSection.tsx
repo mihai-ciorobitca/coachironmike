@@ -16,14 +16,14 @@ export function CoachingGridSection({
   showBadge?: boolean;
 }) {
   return (
-    <section className="mx-auto w-full max-w-[1900px] py-12 sm:py-16">
+    <section className="mx-auto w-full max-w-[1200px] px-6 py-12 sm:py-16 lg:px-8">
       <CoachingSectionHeader
         title={title}
         subtitle={subtitle}
         showBadge={showBadge}
       />
 
-      <div className="mt-10 grid gap-8 px-6 sm:grid-cols-2 lg:px-8">
+      <div className="mt-10 grid gap-8 sm:grid-cols-2">
         {items.map((item) => (
           <CoachingCard key={item.overlayTitle} item={item} className="w-full" />
         ))}

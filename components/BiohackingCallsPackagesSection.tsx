@@ -70,7 +70,7 @@ export function BiohackingCallsPackagesSection() {
         </div>
 
         <p className="max-w-3xl text-base leading-relaxed text-[#111011] sm:text-lg">
-          In den Biohacking Call Paketen geht Mike mit dir deine Probleme durch und
+          In den Biohacking Call Paketen geht Sasha mit dir deine Probleme durch und
           liefert dir individuelle Lösungsansätze durch Biohacking jeglicher Art.
         </p>
 

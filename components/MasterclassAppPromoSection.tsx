@@ -54,7 +54,7 @@ export function MasterclassAppPromoSection() {
               />
             </div>
             <p className="text-sm font-semibold text-white sm:text-base">
-              Biohacking Masterclass by Iron Mike
+              Biohacking Masterclass by Sasha Clean Fitness
             </p>
           </div>
 

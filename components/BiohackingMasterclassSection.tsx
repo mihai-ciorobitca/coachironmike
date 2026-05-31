@@ -86,36 +86,40 @@ export function BiohackingMasterclassSection() {
   return (
     <section className="mx-auto w-full max-w-[1200px] px-6 py-12 lg:px-8">
       <div className="rounded-[24px] bg-[#eef2f7] p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] sm:p-10 lg:p-12">
-        <span className="inline-block rounded-full bg-accent px-4 py-1.5 text-sm font-semibold lowercase text-white">
-          jetzt erhältlich
-        </span>
+        <div className="flex flex-col items-center gap-10 text-center lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:gap-10 xl:gap-14 lg:text-left">
+          <div className="flex w-full flex-col items-center lg:items-start">
+            <span className="inline-block rounded-full bg-accent px-4 py-1.5 text-sm font-semibold lowercase text-white">
+              jetzt erhältlich
+            </span>
 
-        <h2 className="mt-6 max-w-3xl text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-snug tracking-tight text-[#111011]">
-          Die{" "}
-          <span className="font-serif font-medium italic">wirksamsten</span> Biohacking
-          Strategien – jetzt für{" "}
-          <span className="font-serif font-medium italic">jeden verständlich</span>{" "}
-          gemacht.
-        </h2>
+            <h2 className="mt-6 max-w-xl text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-snug tracking-tight text-[#111011] lg:max-w-none">
+              Die{" "}
+              <span className="font-serif font-medium italic">wirksamsten</span> Biohacking
+              Strategien – jetzt für{" "}
+              <span className="font-serif font-medium italic">jeden verständlich</span>{" "}
+              gemacht.
+            </h2>
 
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#4b5563] sm:text-lg">
-          Ob Einsteiger, Fortgeschrittene oder bereits erfahrene Biohacker – wir haben
-          sichergestellt, dass jeder den vollen Umfang der Biohacking Masterclass ideal
-          nutzen kann.
-        </p>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-[#4b5563] sm:text-lg lg:max-w-none">
+              Ob Einsteiger, Fortgeschrittene oder bereits erfahrene Biohacker – wir haben
+              sichergestellt, dass jeder den vollen Umfang der Biohacking Masterclass ideal
+              nutzen kann.
+            </p>
 
-        <Link
-          href="#masterclass"
-          className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold lowercase text-white transition-colors hover:bg-accent-dark"
-        >
-          jetzt starten
-          <ArrowUpRightIcon />
-        </Link>
+            <Link
+              href="#masterclass"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold lowercase text-white transition-colors hover:bg-accent-dark sm:w-auto lg:mt-10"
+            >
+              jetzt starten
+              <ArrowUpRightIcon />
+            </Link>
+          </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-5">
-          {modules.map((module) => (
-            <ModuleCard key={module.title} {...module} />
-          ))}
+          <div className="grid w-full max-w-[520px] grid-cols-2 gap-4 sm:max-w-none sm:gap-5">
+            {modules.map((module) => (
+              <ModuleCard key={module.title} {...module} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

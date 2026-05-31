@@ -15,9 +15,9 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Coaching für Fitness, Gesundheit & Hormone – mit Coach Iron Mike",
+  title: "Coaching für Fitness, Gesundheit & Hormone – mit Sasha Clean Fitness",
   description:
-    "Mehr Gesundheit. Mehr Performance. Werde die beste Version deiner selbst – mit Coach Iron Mike.",
+    "Mehr Gesundheit. Mehr Performance. Werde die beste Version deiner selbst – mit Sasha Clean Fitness.",
   icons: {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
@@ -30,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${manrope.variable} ${sourceSerif.variable} h-full antialiased`}>
-      <body className="min-h-full font-sans">{children}</body>
+    <html lang="de" className={`${manrope.variable} ${sourceSerif.variable} h-full bg-background antialiased`}>
+      <body className="min-h-full bg-background font-sans">{children}</body>
     </html>
   );
 }

@@ -90,7 +90,7 @@ const sponsors: Sponsor[] = [
   },
   {
     id: "otl",
-    caption: "-10% mit 'Mike'",
+    caption: "-10% mit 'Sasha'",
     logo: <OnlineTrainerLogo />,
   },
   {

@@ -73,7 +73,7 @@ export function CoachingCardsCarousel({ items }: { items: CoachingItem[] }) {
       <div
         ref={scrollRef}
         onScroll={updateProgress}
-        className="coaching-carousel flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-2 lg:px-8"
+        className="coaching-carousel -mx-6 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-2 lg:-mx-8 lg:px-8"
       >
         {items.map((item) => (
           <CoachingCard
@@ -84,7 +84,7 @@ export function CoachingCardsCarousel({ items }: { items: CoachingItem[] }) {
         ))}
       </div>
 
-      <div className="mt-8 flex items-center gap-3 px-6 lg:px-8">
+      <div className="mt-8 flex items-center gap-3">
         <ScrollArrow direction="left" onClick={() => scrollByAmount("left")} />
         <div className="relative h-1 flex-1 overflow-hidden rounded-full bg-[#e5e7eb]">
           <div
