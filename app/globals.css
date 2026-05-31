@@ -37,3 +37,25 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+
+@keyframes testimonial-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-marquee {
+  animation: testimonial-scroll 45s linear infinite;
+}
+
+.coaching-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.coaching-carousel::-webkit-scrollbar {
+  display: none;
+}

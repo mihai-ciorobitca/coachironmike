@@ -26,12 +26,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-
-      <div className="mt-4 flex justify-end px-1">
-        <span className="rounded-lg bg-disabled px-4 py-[15px] text-xs font-semibold text-[#374151]">
-          Coaching nicht verfügbar
-        </span>
-      </div>
     </section>
   );
 }
